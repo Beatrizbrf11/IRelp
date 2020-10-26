@@ -1,0 +1,5 @@
+package com.irelp.receitadespesaservice.entity;
+
+public class ReceitaDespesa {
+
+}

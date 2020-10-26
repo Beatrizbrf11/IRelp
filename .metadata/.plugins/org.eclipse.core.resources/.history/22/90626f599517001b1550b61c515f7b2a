@@ -1,0 +1,20 @@
+package com.irelp.receitadespesaservice.entity;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+@Entity
+@Table(name = "receitadespesa")
+public class ReceitaDespesa {
+
+	
+	@Id
+	@JsonProperty("id")
+	private int id;
+
+	@JsonProperty("price")
+	private double price;
+
+	@JsonProperty("description")
+	private String description;
+
+}

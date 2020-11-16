@@ -19,6 +19,11 @@ public class ReceitaDespesaController {
 	@Autowired
 	private ReceitaDespesaService service;
 
+	@RequestMapping(value = "/teste", method = RequestMethod.GET)
+	public ResponseEntity<?> Teste() {
+		return ResponseEntity.ok("Teste");
+	}
+	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public ResponseEntity<?> listReceitaDespesa() {
 		return ResponseEntity.ok(service.listReceitaDespesa());

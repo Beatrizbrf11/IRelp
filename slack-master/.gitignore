@@ -1,0 +1,16 @@
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# IDE Files #
+*.iml
+.idea
+
+# VS Code
+.classpath
+.project
+.settings
+/target/

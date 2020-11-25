@@ -37,6 +37,15 @@ public class ReceitaDespesaService {
 	public ReceitaDespesa createReceitaDespesa(ReceitaDespesa receitaDespesa) {
 		try {
 			repository.save(receitaDespesa);
+
+			String texto = "Receita";
+
+			if (receitaDespesa.getDespesa())
+				texto = "Despesa";
+			new Slack("https://hooks.slack.com/services/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")
+					.text("Sucesso ao cadastrar " + texto + " com a descrição: " + receitaDespesa.getDescricao())
+					.send();
+
 			return receitaDespesa;
 		} catch (Exception ex) {
 			throw new RuntimeException("Erro ao criar: " + ex.getMessage());

@@ -1,8 +1,0 @@
-package com.irelp.receitadespesaservice.repository;
-
-import com.irelp.receitadespesaservice.entity.ReceitaDespesa;
-
-public class ReceitaDespesaRepository extends JpaRepository<ReceitaDespesa, Integer> {
-
-
-}
